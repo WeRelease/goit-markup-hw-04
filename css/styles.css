@@ -14,6 +14,7 @@
   --studio-second-color: #000000;
   --bg-color: #2f303a;
   --bg-second-color: #f5f4fa;
+  --social-color: #afb1b8;
   --half-margin: 30px;
 }
 
@@ -59,12 +60,12 @@ section {
   padding-bottom: 94px;
 }
 .container {
-  width: 1200px;
+  max-width: 1200px;
   padding-right: 15px;
   padding-left: 15px;
   margin: 0 auto;
-  outline: 2px solid red;
-  outline-offset: -2px;
+  /* outline: 2px solid red;
+  outline-offset: -2px; */
 }
 
 /*                ========HEADER START======== */
@@ -104,7 +105,6 @@ section {
 .contact-item:not(:first-child) {
   margin-left: 50px;
 }
-
 .header-link,
 .footer-link {
   font-weight: 500;
@@ -119,26 +119,42 @@ section {
 }
 
 .h-items {
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding-top: 32px;
   padding-bottom: 32px;
-}
 
-.header-contact {
   font-weight: 500;
   font-size: 14px;
   line-height: calc(16 / 14);
   letter-spacing: 0.02em;
-
   color: var(--title-text-color);
+}
+
+.header-icon {
+  margin-right: 10px;
+  fill: currentColor;
 }
 
 /*                ===========HEADER END========             */
 
 /*                ===========HERO START========               */
 .hero {
+  max-width: 1600px;
   padding: 200px 0px;
   text-align: center;
+  margin: 0 auto;
+
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/hero/Img.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 .title {
   width: 696px;
@@ -185,8 +201,12 @@ section {
   justify-content: center;
   margin-left: calc(-1 * var(--half-margin));
 }
-.skills-items::before {
-  display: block;
+/* Skills icon */
+.skills-items-wrap {
+  display: inline-block;
+  text-align: center;
+  margin-bottom: 25px;
+  padding: 30px;
   content: "";
   height: 120px;
   width: 270px;
@@ -292,6 +312,7 @@ section {
   color: var(--primary-text-color);
 }
 .gang-text {
+  margin-bottom: 16px;
   font-weight: 400;
   font-size: 16px;
   line-height: calc(19 / 16);
@@ -299,11 +320,85 @@ section {
   letter-spacing: 0.03em;
   color: var(--title-text-color);
 }
-/*                ========GANG END========                */
+
+.social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+
+  color: var(--social-color);
+}
+.social-icon {
+  margin: auto;
+  fill: currentColor;
+}
+.social-link:hover,
+.social-link:focus {
+  color: var(--primary-white-color);
+  background-color: var(--accent-color);
+}
+
+/*                ========CLIENTS START========                */
+.clients-title {
+  margin-bottom: 50px;
+
+  font-size: 36px;
+  line-height: calc(42 / 36);
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.clients-list {
+  display: flex;
+  margin-right: calc(-1 * var(--half-margin));
+}
+.clients-item {
+  flex-basis: calc(100% / 6 - var(--half-margin));
+  margin-right: var(--half-margin);
+}
+
+.clients-link {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  padding-top: 16px;
+  padding-bottom: 16px;
+
+  color: #afb1b8;
+
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+}
+.clients-link:focus,
+.clients-link:hover {
+  color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+.clients-icon {
+  margin: auto;
+  fill: currentColor;
+}
 /*                  ========FOOTER START========              */
+.adress-wrap {
+  margin-right: 70px;
+}
 .footer {
   padding-top: 60px;
   padding-bottom: 60px;
+}
+.container-footer {
+  display: flex;
+  align-items: baseline;
 }
 
 .footer-logo-part {
@@ -328,13 +423,41 @@ address {
 .footer-link:focus {
   color: var(--accent-color);
 }
-.mail,
-.tel {
-  font-weight: 400;
+.footer-social {
+  justify-content: center;
+}
+.social-title {
+  margin-bottom: 20px;
+
   font-size: 14px;
-  line-height: calc(24 / 14);
+  line-height: calc(16 / 14);
   letter-spacing: 0.03em;
-  color: rgba(255, 255, 255, 0.6);
+  text-transform: uppercase;
+
+  color: var(--primary-white-color);
+}
+.social-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.social-footer-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.1);
+
+  color: var(--primary-white-color);
+}
+
+.social-footer-icon {
+  margin: auto;
+  fill: currentColor;
 }
 
 /*                ========FOOTER END========               */
