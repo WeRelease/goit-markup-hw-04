@@ -47,6 +47,8 @@ a {
 .link:hover,
 .link:focus {
   color: var(--accent-color);
+
+  transition: transform var(--time) var(--anim-time);
 }
 img {
   display: block;
@@ -150,6 +152,8 @@ section {
 .h-items:hover,
 .h-items:focus {
   color: var(--accent-color);
+
+  transition: transform var(--time) var(--anim-time);
 }
 
 [aria-current]::after {
@@ -221,6 +225,8 @@ section {
 .btn:focus,
 .btn:hover {
   background: var(--btn-second-color);
+
+  transition: transform var(--time) var(--anim-time);
 }
 /*                ========HERO END========               */
 
@@ -381,6 +387,8 @@ section {
 .social-footer-link:focus {
   color: var(--primary-white-color);
   background-color: var(--accent-color);
+
+  transition: transform var(--time) var(--anim-time);
 }
 
 /*                ========CLIENTS START========                */
@@ -419,6 +427,8 @@ section {
 .clients-link:hover {
   color: var(--accent-color);
   border-color: var(--accent-color);
+
+  transition: transform var(--time) var(--anim-time);
 }
 .clients-icon {
   margin: auto;
@@ -458,6 +468,8 @@ address {
 .footer-link:hover,
 .footer-link:focus {
   color: var(--accent-color);
+
+  transition: transform var(--time) var(--anim-time);
 }
 .footer-social {
   justify-content: center;
@@ -530,6 +542,8 @@ address {
   color: var(--primary-white-color);
   background: var(--accent-color);
   border-radius: 4px;
+
+  transition: transform var(--time) var(--anim-time);
 }
 
 /*                ========Gallery UL========            */
@@ -584,6 +598,8 @@ address {
 }
 .features-items:hover .overlay {
   transform: translateY(0);
+
+  transition: transform var(--time) var(--anim-time);
 }
 
 .portfolio-inside {
@@ -615,6 +631,8 @@ address {
 .features-items:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+
+  transition: transform var(--time) var(--anim-time);
 }
 
 /*                ========PORTFOLIO END========            */
