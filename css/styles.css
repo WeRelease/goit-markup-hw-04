@@ -104,6 +104,7 @@ section {
 
 .header-list {
   display: inline-flex;
+  align-items: center;
 }
 
 .header-item:not(:first-child),
